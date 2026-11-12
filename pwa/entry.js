@@ -1,7 +1,7 @@
 'use strict';
 const {Game}=require('../minigame/client/game');
 const {createPerformance}=require('../minigame/client/performance');
-const {loadImage}=require('../minigame/client/image-loader');
+const {createImages}=require('./images');
 const {editName}=require('../preview/name-input');
 const {editSecret}=require('../preview/secret-input');
 const {createMusicBus}=require('../minigame/client/music');
@@ -16,7 +16,7 @@ const {installShell}=require('./shell');
 const {appPaths}=require('./paths');
 const paths=appPaths(document.baseURI),asset=paths.asset;
 const config=require('./config');
-const canvas=document.getElementById('game'),viewport=createViewport(canvas),audio=createWebAudio();
+const canvas=document.getElementById('game'),viewport=createViewport(canvas),audio=createWebAudio(),images=createImages();
 const music=createMusicBus(audio.createPlayer,track=>asset('table-music/'+track+'.mp3'));
 const ambient=createAmbient(audio.createPlayer,theme=>asset('assets/ambient-'+theme+'.wav'));
 function clip(src,done,volume){const a=audio.createPlayer();a.src=src;a.volume=volume;a.onended=done;a.onerror=done;return{play:()=>a.play(),stop(){a.onended=null;a.onerror=null;a.pause();}};}
@@ -32,11 +32,11 @@ const platform={
   isOnline:()=>navigator.onLine,socketUrl:config.socketUrl,socketTimeout:20000,
   read:storage.read,write:storage.write,size:viewport.size,frame:cb=>requestAnimationFrame(cb),
   createCanvas:()=>document.createElement('canvas'),
-  image(file,done){loadImage(()=>new Image(),asset('assets/'+file),done);},
-  themeImage(file,done){loadImage(()=>new Image(),asset('table-themes/'+file),done);},
-  uiImage(file,done){loadImage(()=>new Image(),asset((['action-fx-atlas.png','card-back-reference.jpg'].includes(file)?'table-fx/':'ui-art/')+file),done);},
-  uiFont(done){let ended=false;const finish=v=>{if(!ended){ended=true;clearTimeout(timer);done(v);}};const timer=setTimeout(()=>finish(null),8000);
-    if(!window.FontFace){finish(null);return;}const face=new FontFace('Moce UI Sans','url("'+asset('ui-art/ui-sans.ttf')+'")');face.load().then(f=>{document.fonts.add(f);finish('Moce UI Sans');},()=>finish(null));},
+  image(file,done){images.load(asset('assets/'+file),done);},
+  themeImage(file,done){images.load(asset('table-themes/'+file),done);},
+  uiImage(file,done){images.load(asset((['action-fx-atlas.png','card-back-reference.jpg'].includes(file)?'table-fx/':'ui-art/')+file),done);},
+  uiFont(done){let loaded=false;const timer=setTimeout(()=>{if(!loaded)done(null);},12000);
+    if(!window.FontFace){clearTimeout(timer);done(null);return;}const face=new FontFace('Moce UI Sans','url("'+asset('ui-art/ui-sans.ttf')+'")');face.load().then(f=>{loaded=true;clearTimeout(timer);document.fonts.add(f);done('Moce UI Sans');},()=>{clearTimeout(timer);done(null);});},
   openSocket(events){const socket=new WebSocket(platform.socketUrl);socket.onopen=events.open;socket.onmessage=e=>events.message(e.data);socket.onclose=e=>events.close(e.code,e.reason);socket.onerror=()=>{};return{send:data=>socket.send(data),close:()=>socket.close()};},
   async copy(text,done){try{await navigator.clipboard.writeText(String(text));done(true);}catch{window.prompt('长按复制下方内容',String(text));done(false);}},
   async share(code,title){const url=paths.invite(code);
@@ -66,7 +66,7 @@ window.addEventListener('pagehide',()=>lifecycle.setActive(false));
 window.addEventListener('pageshow',()=>{lifecycle.setActive(true);resize();});
 document.addEventListener('visibilitychange',()=>{lifecycle.setActive(!document.hidden);if(!document.hidden){resize();if(wantsWake)keepScreen(true);}});
 window.addEventListener('offline',()=>lifecycle.networkChanged(false));window.addEventListener('online',()=>lifecycle.networkChanged(true));
-shell=installShell({game,version:config.version,paths});
-document.getElementById('loading').remove();game.foreground(invite());
+shell=installShell({game,version:config.version,paths,images});
+game.foreground(invite());
 // Removed entirely by the public build; visual QA can inspect a separate local bundle.
 if(MOCE_PWA_DEBUG)window.__moceTest={game,platform,audio,viewport,lifecycle,shell,fixture:require('../preview/ui-fixtures').fixture};

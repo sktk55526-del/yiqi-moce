@@ -13,12 +13,15 @@
   <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
   <link rel="icon" href="./icons/icon-192.png" type="image/png">
   <link rel="stylesheet" href="./app.css">
+  <link rel="preload" as="image" href="./ui-art/home-compact.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="./ui-art/home-wordmark.png" fetchpriority="high">
   <title>一起抹车</title>
 </head>
 <body>
   <main id="app"><canvas id="game" tabindex="0" aria-label="一起抹车游戏桌"></canvas></main>
   <div id="safe-probe" aria-hidden="true"></div>
-  <div id="loading" role="status"><img src="./icons/icon-192.png" width="80" height="80" alt=""><strong>一起抹车</strong><span id="loading-text">正在准备茶桌…</span><button id="retry" hidden>重新加载</button></div>
+  <div id="loading" role="status"><img src="./icons/icon-192.png" width="80" height="80" alt=""><strong>一起抹车</strong><span id="loading-text">正在准备茶桌…</span><button id="retry" hidden>重新加载</button><button id="continue-loading" hidden>先进入游戏</button></div>
+  <div id="image-status" hidden role="status"><span id="image-status-text"></span><button id="retry-images">重试图片</button></div>
   <div id="update" hidden role="status"><span>新版已准备好</span><button id="apply-update">更新并重新打开</button><button id="later-update" aria-label="稍后更新">稍后</button></div>
   <noscript>请使用支持 JavaScript 的浏览器打开一起抹车。</noscript>
   <script src="./boot.js" defer></script>

@@ -26,7 +26,8 @@ function list(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.
 const files=list(out).sort(),hash=crypto.createHash('sha256');for(const f of files){hash.update(path.relative(out,f).replaceAll('\\','/'));hash.update(fs.readFileSync(f));}
 hash.update(fs.readFileSync(path.join(root,'pwa/sw.js')));
 const cache=config.version+'-'+hash.digest('hex').slice(0,16);
-fs.writeFileSync(path.join(out,'sw.js'),fs.readFileSync(path.join(root,'pwa/sw.js'),'utf8').replace('__CACHE__',JSON.stringify(cache)).replace('__FILES__',JSON.stringify(files.map(f=>'./'+path.relative(out,f).replaceAll('\\','/')))));
+const core=['index.html',name,'app.css','boot.js','manifest.webmanifest','icons/icon-192.png','ui-art/home-compact.jpg','ui-art/home-wordmark.png'];
+fs.writeFileSync(path.join(out,'sw.js'),fs.readFileSync(path.join(root,'pwa/sw.js'),'utf8').replace('__CACHE__',JSON.stringify(cache)).replace('__FILES__',JSON.stringify(files.map(f=>'./'+path.relative(out,f).replaceAll('\\','/')))).replace('__CORE__',JSON.stringify(core.map(file=>'./'+file))));
 fs.writeFileSync(path.join(out,'.nojekyll'),'');
 fs.writeFileSync(path.join(out,'_headers'),'/sw.js\n  Cache-Control: no-cache, no-store, must-revalidate\n  Service-Worker-Allowed: /\n/index.html\n  Cache-Control: no-cache\n/manifest.webmanifest\n  Cache-Control: no-cache\n/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n');
-console.log(JSON.stringify({version:config.version,debug,files:files.length,bytes:files.reduce((n,f)=>n+fs.statSync(f).size,0),bundle:name,cache,output:out}));
+console.log(JSON.stringify({version:config.version,debug,files:files.length,bytes:files.reduce((n,f)=>n+fs.statSync(f).size,0),startupCacheFiles:core.length,startupCacheBytes:core.reduce((n,f)=>n+fs.statSync(path.join(out,f)).size,0),bundle:name,cache,output:out}));
