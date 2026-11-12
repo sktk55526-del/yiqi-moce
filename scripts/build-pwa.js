@@ -23,7 +23,7 @@ fs.writeFileSync(path.join(out,'manifest.webmanifest'),JSON.stringify({id:'./',n
   start_url:'./?source=homescreen',scope:'./',display:'standalone',orientation:'portrait',theme_color:'#062d24',background_color:'#062d24',
   icons:[{src:'./icons/icon-192.png',sizes:'192x192',type:'image/png',purpose:'any'},{src:'./icons/icon-512.png',sizes:'512x512',type:'image/png',purpose:'any'},{src:'./icons/maskable-512.png',sizes:'512x512',type:'image/png',purpose:'maskable'}]},null,2));
 function list(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?list(path.join(dir,e.name)):[path.join(dir,e.name)]);}
-const files=list(out).sort(),hash=crypto.createHash('sha256');for(const f of files){hash.update(path.relative(out,f));hash.update(fs.readFileSync(f));}
+const files=list(out).sort(),hash=crypto.createHash('sha256');for(const f of files){hash.update(path.relative(out,f).replaceAll('\\','/'));hash.update(fs.readFileSync(f));}
 hash.update(fs.readFileSync(path.join(root,'pwa/sw.js')));
 const cache=config.version+'-'+hash.digest('hex').slice(0,16);
 fs.writeFileSync(path.join(out,'sw.js'),fs.readFileSync(path.join(root,'pwa/sw.js'),'utf8').replace('__CACHE__',JSON.stringify(cache)).replace('__FILES__',JSON.stringify(files.map(f=>'./'+path.relative(out,f).replaceAll('\\','/')))));
