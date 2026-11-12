@@ -1,0 +1,119 @@
+{
+  "source": "Local Windows System.Speech, Microsoft Kangkang; synthesized game calls, not a human recording or voice clone.",
+  "processing": "Trim silence, normalize loudness, light echo on penalty >= 6; mono 24 kHz PCM.",
+  "clips": [
+    {
+      "file": "eat.wav",
+      "text": "吃！",
+      "duration": 0.297,
+      "peakDb": -2.1
+    },
+    {
+      "file": "report.wav",
+      "text": "报！",
+      "duration": 0.247,
+      "peakDb": -2.0
+    },
+    {
+      "file": "penalty-2.wav",
+      "text": "加二！",
+      "duration": 0.495,
+      "peakDb": -3.8
+    },
+    {
+      "file": "penalty-4.wav",
+      "text": "加四！",
+      "duration": 0.472,
+      "peakDb": -2.0
+    },
+    {
+      "file": "penalty-6.wav",
+      "text": "加六！",
+      "duration": 0.483,
+      "peakDb": -2.0
+    },
+    {
+      "file": "penalty-8.wav",
+      "text": "加八！",
+      "duration": 0.443,
+      "peakDb": -2.0
+    },
+    {
+      "file": "penalty-10.wav",
+      "text": "加十！",
+      "duration": 0.521,
+      "peakDb": -2.1
+    },
+    {
+      "file": "penalty-12.wav",
+      "text": "加十二！",
+      "duration": 0.567,
+      "peakDb": -2.1
+    },
+    {
+      "file": "penalty-14.wav",
+      "text": "加十四！",
+      "duration": 0.586,
+      "peakDb": -2.1
+    },
+    {
+      "file": "penalty-16.wav",
+      "text": "加十六！",
+      "duration": 0.594,
+      "peakDb": -2.1
+    },
+    {
+      "file": "penalty-18.wav",
+      "text": "加十八！",
+      "duration": 0.575,
+      "peakDb": -2.1
+    },
+    {
+      "file": "penalty-20.wav",
+      "text": "加二十！",
+      "duration": 0.657,
+      "peakDb": -2.0
+    },
+    {
+      "file": "penalty-22.wav",
+      "text": "加二十二！",
+      "duration": 0.732,
+      "peakDb": -2.1
+    },
+    {
+      "file": "penalty-24.wav",
+      "text": "加二十四！",
+      "duration": 0.767,
+      "peakDb": -2.1
+    },
+    {
+      "file": "penalty-26.wav",
+      "text": "加二十六！",
+      "duration": 0.766,
+      "peakDb": -2.1
+    },
+    {
+      "file": "penalty-28.wav",
+      "text": "加二十八！",
+      "duration": 0.749,
+      "peakDb": -2.1
+    },
+    {
+      "file": "penalty-30.wav",
+      "text": "加三十！",
+      "duration": 0.693,
+      "peakDb": -2.1
+    },
+    {
+      "file": "penalty-32.wav",
+      "text": "加三十二！",
+      "duration": 0.749,
+      "peakDb": -2.0
+    },
+    {
+      "file": "missed-report.wav",
+      "text": "漏报，罚摸一张。",
+      "duration": 1.401
+    }
+  ]
+}

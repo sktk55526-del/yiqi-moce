@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+  <meta name="theme-color" content="#062d24">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="一起抹车">
+  <meta name="description" content="广东纸牌，好友同桌。2至6人联机，也可人机练习；添加到手机桌面，随时返回牌局。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' wss://moce-server-344777-7-1528769786.sh.run.tcloudbase.com; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="icon" href="./icons/icon-192.png" type="image/png">
+  <link rel="stylesheet" href="./app.css">
+  <title>一起抹车</title>
+</head>
+<body>
+  <main id="app"><canvas id="game" tabindex="0" aria-label="一起抹车游戏桌"></canvas></main>
+  <div id="safe-probe" aria-hidden="true"></div>
+  <div id="loading" role="status"><img src="./icons/icon-192.png" width="80" height="80" alt=""><strong>一起抹车</strong><span id="loading-text">正在准备茶桌…</span><button id="retry" hidden>重新加载</button></div>
+  <div id="update" hidden role="status"><span>新版已准备好</span><button id="apply-update">更新并重新打开</button><button id="later-update" aria-label="稍后更新">稍后</button></div>
+  <noscript>请使用支持 JavaScript 的浏览器打开一起抹车。</noscript>
+  <script src="./boot.js" defer></script>
+  <script src="./__BUNDLE__" defer></script>
+</body>
+</html>

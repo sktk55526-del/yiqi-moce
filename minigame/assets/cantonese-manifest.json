@@ -1,0 +1,154 @@
+{
+  "source": "Microsoft Edge TTS; synthesized Hong Kong Cantonese, no human voice clone.",
+  "locale": "zh-HK",
+  "voice": "zh-HK-WanLungNeural",
+  "rate": "+12%",
+  "volume": "-8%",
+  "clips": [
+    {
+      "file": "yue-eat.mp3",
+      "text": "食！",
+      "sha256": "fd177d74da67118b452b07b9a10aceded1ba3593cc0ea8584dff4845d58c4fd0"
+    },
+    {
+      "file": "yue-report.mp3",
+      "text": "報！",
+      "sha256": "aa30f0249d0d81f81ef4306d724230aa966b2f2735f6245f9069870c9fef34a2"
+    },
+    {
+      "file": "yue-missed-report.mp3",
+      "text": "漏報，罰抽一張！",
+      "sha256": "09033ed3be4a612d9c79b629f4bde83e468bb8cde9e7dbace5c0d370454b267d"
+    },
+    {
+      "file": "yue-suit-club.mp3",
+      "text": "梅花！",
+      "sha256": "63fb9d8111ffdd62940e7bafe0b7858debcbe89e6c8ce220a4477e0ef42a4fba"
+    },
+    {
+      "file": "yue-suit-heart.mp3",
+      "text": "紅心！",
+      "sha256": "feb28a6e3eae23d99ef8ec744281c36adf073fb969d8bc4ab81329a50da2d010"
+    },
+    {
+      "file": "yue-suit-diamond.mp3",
+      "text": "階磚！",
+      "sha256": "ccbf771cd6f162dcc219211c9e825c283d3c247003fb7a8e6bfca3ffd6417cb8"
+    },
+    {
+      "file": "yue-suit-spade.mp3",
+      "text": "葵扇！",
+      "sha256": "6a2247484b5069b735d8cf8f95149c36a32eb4767c2213e86bc6f8fd3e7aa89c"
+    },
+    {
+      "file": "yue-penalty-2.mp3",
+      "text": "加兩張！",
+      "sha256": "97b2538fd9a825cd42285902044cc03a9fef12c2a93310ff58a8251c1efe4310"
+    },
+    {
+      "file": "yue-penalty-4.mp3",
+      "text": "加四張！",
+      "sha256": "d4c02a319bbad95e36957a79e0d423f66cd854f26839ea85d339eacdd4172f76"
+    },
+    {
+      "file": "yue-penalty-6.mp3",
+      "text": "加六張！",
+      "sha256": "e5f95ba21d25e6bcf12ab8f5a7dae263c99f654c43c66868b665c97ea258481f"
+    },
+    {
+      "file": "yue-penalty-8.mp3",
+      "text": "加八張！",
+      "sha256": "00b9ad1e7e5871e254017d27981a9859d28117f064d997cdf29d4286564efece"
+    },
+    {
+      "file": "yue-penalty-10.mp3",
+      "text": "加十張！",
+      "sha256": "b22ae1cde02ea62ad7f25cf39b9809aae8e0dcb31716a4992bc59d263141cb32"
+    },
+    {
+      "file": "yue-penalty-12.mp3",
+      "text": "加十二張！",
+      "sha256": "72804e9c43b3d1434831ab028f820c4db39f300c232259041786142dfbb7e176"
+    },
+    {
+      "file": "yue-penalty-14.mp3",
+      "text": "加十四張！",
+      "sha256": "f1a27e346b602b61a1e1abbc904c1c27def93f649f0700b326eb7112f82041ea"
+    },
+    {
+      "file": "yue-penalty-16.mp3",
+      "text": "加十六張！",
+      "sha256": "6396c9d5b4cb9b2d0c37fb14af074063ef83d5378aa75dff10c37631fbe66956"
+    },
+    {
+      "file": "yue-penalty-18.mp3",
+      "text": "加十八張！",
+      "sha256": "a0bb3f04e7643ed98b0ceb01e165823edcee865e7ef5e9e274521ef9efc0691e"
+    },
+    {
+      "file": "yue-penalty-20.mp3",
+      "text": "加廿張！",
+      "sha256": "f579530312aea8d2905b7781ca6d9c86816f5bf3351776ddaed229cc567231ca"
+    },
+    {
+      "file": "yue-penalty-22.mp3",
+      "text": "加廿二張！",
+      "sha256": "e8d44c60f1e56eafcde2c09c7fed95f6da76219a081f949d06991909bdc59b81"
+    },
+    {
+      "file": "yue-penalty-24.mp3",
+      "text": "加廿四張！",
+      "sha256": "136771bd3b15e5c88c483fb6852bf1ca5bf56ee94c3e3f092de73484547b24a4"
+    },
+    {
+      "file": "yue-penalty-26.mp3",
+      "text": "加廿六張！",
+      "sha256": "874cd0e6d747d6ec0fed3f7f0dd47c735a50590045c12b79a860f2a1aab3c2b1"
+    },
+    {
+      "file": "yue-penalty-28.mp3",
+      "text": "加廿八張！",
+      "sha256": "2f2c141f0c5291c6729c6cb94abe824adfc82ccdd0e80d36e8c54e42a5a6f34d"
+    },
+    {
+      "file": "yue-penalty-30.mp3",
+      "text": "加三十張！",
+      "sha256": "d9be13cffb6a7df950744b88c3b905992576466ae0f0b3f75c366c170886b564"
+    },
+    {
+      "file": "yue-penalty-32.mp3",
+      "text": "加三十二張！",
+      "sha256": "f6377b52b3af14e173bc3c107517397e2e4df803164865767d816bce852da23f"
+    },
+    {
+      "file": "yue-hello.mp3",
+      "text": "飲啖茶，慢慢嚟。",
+      "sha256": "9d6679cbbf99683a83243d3c2ee744d7921d5275aad0cd62d8e92460af19f627"
+    },
+    {
+      "file": "yue-nice.mp3",
+      "text": "好嘢！",
+      "sha256": "a45d800324fe9557957a2308af57c7516738cf7ecdeeddc37cc425fdb247cba1"
+    },
+    {
+      "file": "yue-wow.mp3",
+      "text": "勁喎！",
+      "sha256": "4fe86d771a1ed5c3834a3a7b7c255e874164bdd806b589f0cb11eab9b60be988"
+    },
+    {
+      "file": "yue-think.mp3",
+      "text": "等我諗諗先。",
+      "sha256": "cfde6681288587717395fd32e12edc64e80b9a74cea619e8653bce738691c605"
+    },
+    {
+      "file": "yue-luck.mp3",
+      "text": "好運嚟喇！",
+      "sha256": "553392313bae36dad71df0f76c88bfcb77317bb7b68674e2ba168ec6df9ff5fb"
+    },
+    {
+      "file": "yue-again.mp3",
+      "text": "再嚟一鋪！",
+      "sha256": "f8ed8c0d22fccdc796233615f7ac2640637c6af8ae7c003984fc25100780c8c8"
+    }
+  ]
+}

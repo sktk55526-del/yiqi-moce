@@ -1,0 +1,45 @@
+{
+  "source": "Microsoft Edge TTS, zh-CN-YunxiNeural / zh-HK-WanLungNeural; synthesized voices.",
+  "clips": [
+    {
+      "file": "suit-club.mp3",
+      "text": "梅花",
+      "language": "mandarin"
+    },
+    {
+      "file": "yue-suit-club.mp3",
+      "text": "梅花",
+      "language": "yue"
+    },
+    {
+      "file": "suit-heart.mp3",
+      "text": "红桃",
+      "language": "mandarin"
+    },
+    {
+      "file": "yue-suit-heart.mp3",
+      "text": "紅心",
+      "language": "yue"
+    },
+    {
+      "file": "suit-diamond.mp3",
+      "text": "方块",
+      "language": "mandarin"
+    },
+    {
+      "file": "yue-suit-diamond.mp3",
+      "text": "階磚",
+      "language": "yue"
+    },
+    {
+      "file": "suit-spade.mp3",
+      "text": "黑桃",
+      "language": "mandarin"
+    },
+    {
+      "file": "yue-suit-spade.mp3",
+      "text": "葵扇",
+      "language": "yue"
+    }
+  ]
+}
